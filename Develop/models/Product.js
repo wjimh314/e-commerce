@@ -26,13 +26,24 @@ Product.init(
       iseDecimal:true
     }
   },
-  
-
+stock: {
+  type: DataTypes.INTERGER,
+  allowNull :false,
+  defaultValue: 10,
+  validate: {
+    isNumeric: true
   }
-
-
-
   },
+
+  caterorgy_id {
+    type: DataTypes.interger,
+    references: {
+      model: "category",
+      key: "id"
+    }
+  },
+
+
   {
     sequelize,
     timestamps: false,
