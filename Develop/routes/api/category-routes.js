@@ -5,7 +5,7 @@ const seedProducts = require("../../seeds/product-seeds");
 // The `/api/categories` endpoint
 
 router.get("/", (req, res) => {
-	Catergory,
+	Category,
 		findAll({
 			attributes: ["id", "category_name"],
 			include: [
@@ -60,7 +60,7 @@ router
 	});
 
 router.put("/:id", (req, res) => {
-	Catergory.update(req.body, {
+	Category.update(req.body, {
 		where: {
 			id: req.params.id,
 		},
